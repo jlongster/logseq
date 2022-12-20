@@ -241,6 +241,9 @@
    :editor/select-all-blocks       {:binding "mod+shift+a"
                                     :fn      editor-handler/select-all-blocks!}
 
+   :editor/select-parent           {:binding "mod+a"
+                                    :fn      editor-handler/select-parent}
+
    :editor/zoom-in                 {:binding (if mac? "mod+." "alt+right")
                                     :fn      editor-handler/zoom-in!}
 
@@ -519,6 +522,7 @@
                           :editor/open-edit
                           :editor/select-block-up
                           :editor/select-block-down
+                          :editor/select-parent
                           :editor/delete-selection
                           :editor/expand-block-children
                           :editor/collapse-block-children
@@ -600,6 +604,7 @@
     :editor/indent
     :editor/outdent
     :editor/select-all-blocks
+    :editor/select-parent
     :go/search
     :go/search-in-page
     :go/electron-find-in-page
@@ -677,6 +682,7 @@
    :shortcut.category/block-selection
    [:editor/open-edit
     :editor/select-all-blocks
+    :editor/select-parent
     :editor/select-block-up
     :editor/select-block-down
     :editor/delete-selection]
